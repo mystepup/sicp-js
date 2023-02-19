@@ -22,5 +22,5 @@ function sqrt_iter(guess, x) {
     return is_good_enough(guess, x) ? guess: sqrt_iter(improve(guess, x), x)
 }
 
-console.log(sqrt_iter(1, 2))
+console.log(sqrt_iter(316227766.016837941111111, 100000000000000000))
 
