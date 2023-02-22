@@ -15,7 +15,7 @@ function plusA(a, b) {
  *  inc(plusA(a - 1, b))
  *  inc(inc(plusA(a - 2, b))
  *  ...
- *  inc(inc(inc...inc(plusA(0, b))...))
+ *  inc(inc(inc...inc(plusA(0, b))...)) -> deferred operation
  * */
 
 
