@@ -26,3 +26,6 @@ function cc(amount, kinds_of_coins) {
 
 count_change(35)
 console.log(space)
+
+// space n ** 2
+// step n
