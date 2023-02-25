@@ -1,4 +1,4 @@
-const abs = require("../common/utils")
+const {abs} = require("../common/utils")
 
 let count = 0
 function cube(x) {

@@ -6,5 +6,8 @@ module.exports = {
     },
     square: function(x) {
         return x * x;
+    },
+    is_even: function(x) {
+        return x % 2 === 0;
     }
 }
