@@ -11,7 +11,9 @@ function first_denomination(kinds_of_coins) {
         :  0
 }
 
+let space = 0;
 function cc(amount, kinds_of_coins) {
+    space++
     return amount === 0
         ? 1
         : amount < 0 || kinds_of_coins === 0
@@ -22,4 +24,5 @@ function cc(amount, kinds_of_coins) {
               kinds_of_coins)
 }
 
-cc(11)
+count_change(35)
+console.log(space)
