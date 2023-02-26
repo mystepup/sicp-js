@@ -35,4 +35,6 @@ function search_for_primes(from, to) {
 }
 
 
-search_for_primes(1000000, 10000000)
+// search_for_primes(1000000, 10000000)
+
+start_prime_test(1000037, Date.now())
