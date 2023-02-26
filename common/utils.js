@@ -9,5 +9,11 @@ module.exports = {
     },
     is_even: function(x) {
         return x % 2 === 0;
+    },
+    double: function(x) {
+        return x + x;
+    },
+    halve: function(x) {
+        return x / 2;
     }
 }
