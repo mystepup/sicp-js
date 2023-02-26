@@ -1,19 +1,22 @@
-
+function abs(x) {
+    return x > 0 ? x : -x
+}
+function square(x) {
+    return x * x;
+}
+function is_even(x) {
+    return x % 2 === 0;
+}
+function double(x) {
+    return x + x;
+}
+function halve(x) {
+    return x / 2;
+}
+function gcd(x, y) {
+    return y === 0 ? x : gcd(y, x % y)
+}
 
 module.exports = {
-    abs: function(x) {
-        return x > 0 ? x : -x
-    },
-    square: function(x) {
-        return x * x;
-    },
-    is_even: function(x) {
-        return x % 2 === 0;
-    },
-    double: function(x) {
-        return x + x;
-    },
-    halve: function(x) {
-        return x / 2;
-    }
+    abs, square, is_even, double, halve, gcd
 }
