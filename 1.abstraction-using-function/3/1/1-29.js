@@ -1,4 +1,5 @@
 const { sum, cube, is_even} = require('../../../common/utils')
+const { sum: sum_iterative } = require('./1-30')
 
 // Simpson's Rule
 function simpson_rule(f, a, b, n) {
@@ -12,7 +13,7 @@ function simpson_rule(f, a, b, n) {
         return k + 1;
     }
 
-    return (h / 3) * sum(term, 0, next, n)
+    return (h / 3) * sum_iterative(term, 0, next, n)
 }
 
 console.log(simpson_rule(cube, 0, 1, 1000))

@@ -1,4 +1,5 @@
 const { sum, cube } = require('../../../common/utils')
+const { sum: sum_iterative } = require('./1-30')
 
 function integral(f, a, b, dx) {
     function add_dx(x) {
