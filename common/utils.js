@@ -29,6 +29,10 @@ function sum(term, a, next, b) {
     return a > b ? 0 : term(a) + sum(term, next(a), next, b);
 }
 
+function display(x) {
+    console.log(x)
+}
+
 module.exports = {
-    abs, square, is_even, double, halve, gcd, average, sum, cube
+    abs, square, is_even, double, halve, gcd, average, sum, cube, display
 }

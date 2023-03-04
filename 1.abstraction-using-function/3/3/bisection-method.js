@@ -1,4 +1,4 @@
-const { average, abs } = require('../../common/utils');
+const { average, abs } = require('../../../common/utils');
 
 function close_enough(x, y) {
     return abs(x - y) < 0.0001
