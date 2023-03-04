@@ -1,8 +1,8 @@
 function continued_fraction_iterative(n, d, k) {
-    function iter(k, result) {
-        return k === 0 ? result : iter(k - 1, n(k) / (d(k) + result))
+    function iter(i, result) {
+        return i === 0 ? result : iter(i - 1, n(i) / (d(i) + result))
     }
-    return iter(k, 0);
+    return iter(k, 0)
 }
 
 function euler(i) {
@@ -15,4 +15,4 @@ function euler(i) {
         : 1
 }
 
-console.log(continued_fraction_iterative(i => 1, euler, 100))
+console.log(continued_fraction_iterative(i => 1, euler, 11))
