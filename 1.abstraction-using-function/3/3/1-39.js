@@ -9,6 +9,7 @@ function continued_fraction_iterative(n, d, k) {
     return iter(k, 0)
 }
 
+
 function tan_cf(x, k) {
     function lambert(i) {
         return i === 1 ? x : -1 * square(x)
