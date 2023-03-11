@@ -33,6 +33,26 @@ function display(x) {
     console.log(x)
 }
 
+function pair(x, y) {
+    function dispatch(m) {
+        return m === 0
+            ? x
+            : m === 1
+            ? y
+            : new Error("argument not 0 or 1 -- pair")
+    }
+    return dispatch
+}
+
+function head(z) {
+    return z(0)
+}
+
+function tail(z) {
+    return z(1)
+}
+
+
 module.exports = {
-    abs, square, is_even, double, halve, gcd, average, sum, cube, display
+    abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail
 }
