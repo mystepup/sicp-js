@@ -1,0 +1,23 @@
+{
+  "name": "scip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mystepup/scip-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mystepup/scip-js/issues"
+  },
+  "homepage": "https://github.com/mystepup/scip-js#readme",
+  "description": "",
+  "dependencies": {
+    "sicp": "^1.1.4"
+  }
+}

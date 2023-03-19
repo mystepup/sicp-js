@@ -34,25 +34,52 @@ function display(x) {
 }
 
 function pair(x, y) {
-    function dispatch(m) {
-        return m === 0
-            ? x
-            : m === 1
-            ? y
-            : new Error("argument not 0 or 1 -- pair")
-    }
-    return dispatch
+    return m => m(x, y)
+}
+
+function is_pair(p) {
+    return typeof p === 'function'
 }
 
 function head(z) {
-    return z(0)
+    return z((p, q) => p)
 }
 
 function tail(z) {
-    return z(1)
+    return z((p, q) => q)
 }
 
+function is_null(list) {
+    return list === null
+}
+
+function list(...elem) {
+    return elem.length === 0
+        ? null
+        : pair(elem[0], list(...elem.slice(1)))
+}
+
+function display_list(list) {
+    if (is_null(list)) console.log("list(null)")
+    else {
+        let log = "list("
+        function iter(l) {
+            const h = head(l)
+            const t = tail(l)
+
+            if (t === null) {
+                log += h + ")"
+            } else {
+                log += h + ", "
+                iter(t)
+            }
+        }
+        iter(list)
+        console.log(log)
+    }
+}
 
 module.exports = {
-    abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail
+    abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail,
+    list, display_list, is_null, is_pair
 }
