@@ -25,6 +25,10 @@ function average(x, y) {
     return (x + y) / 2;
 }
 
+function plus(x, y) {
+    return x + y
+}
+
 function sum(term, a, next, b) {
     return a > b ? 0 : term(a) + sum(term, next(a), next, b);
 }
@@ -59,27 +63,33 @@ function list(...elem) {
         : pair(elem[0], list(...elem.slice(1)))
 }
 
-function display_list(list) {
-    if (is_null(list)) console.log("list(null)")
-    else {
-        let log = "list("
-        function iter(l) {
-            const h = head(l)
-            const t = tail(l)
+function is_odd(x) {
+    return x % 2 === 1
+}
 
-            if (t === null) {
-                log += h + ")"
-            } else {
-                log += h + ", "
-                iter(t)
-            }
+function display_list(items) {
+    function iter(list) {
+        if (is_null(list)) {
+            return ")"
+        } else if (is_pair(head(list))) {
+            return "list(" + iter(head(list)) + iter(tail(list))
+        } else {
+            return head(list) + ", " + iter(tail(list))
         }
-        iter(list)
-        console.log(log)
     }
+    const result = iter(items)
+    console.log(`list(${result})`)
+}
+
+function times(x, y) {
+    return x * y
+}
+
+function divide(x, y) {
+    return x / y
 }
 
 module.exports = {
     abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail,
-    list, display_list, is_null, is_pair
+    list, display_list, is_null, is_pair, is_odd, plus, times, divide
 }

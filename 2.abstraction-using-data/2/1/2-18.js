@@ -1,10 +1,10 @@
 const {is_null, tail, head, pair} = require("../../../common/utils");
 
 function reverse(items) {
-    function iter(list, reversed) {
-        return is_null(list)
+    function iter(items, reversed) {
+        return is_null(items)
             ? reversed
-            : iter(tail(list), pair(head(list), reversed))
+            : iter(tail(items), pair(head(items), reversed))
     }
     return iter(items, null)
 }
