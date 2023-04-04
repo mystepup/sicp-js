@@ -70,4 +70,4 @@ function even_fibs_improved(n) {
                                     enumerate_interval(0, n))))
 }
 
-module.exports = { accumulate }
+module.exports = { accumulate, filter, enumerate_interval }

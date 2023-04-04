@@ -5,9 +5,9 @@ function for_each(func, items) {
         if (!is_null(list)) {
         func(head(list))
         iter(tail(list))
+        }
     }
-}
-iter(items)
+    iter(items)
 }
 
 module.exports = { for_each }

@@ -53,3 +53,5 @@ function perimeter(r) {
 function area(r) {
     return size(width(r)) * size(height(r))
 }
+
+module.exports = {start_segment, end_segment}

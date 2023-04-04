@@ -25,4 +25,4 @@ function is_prime(n) {
 // console.log(smallest_divisor(1999)) // 1999
 // console.log(smallest_divisor(19999)) // 7
 
-module.exports = is_prime
+module.exports = { is_prime }

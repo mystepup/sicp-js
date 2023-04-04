@@ -38,19 +38,22 @@ function display(x) {
 }
 
 function pair(x, y) {
-    return m => m(x, y)
+    // return m => m(x, y)
+    return [x, y]
 }
 
 function is_pair(p) {
-    return typeof p === 'function'
+    return typeof p === 'object'
 }
 
 function head(z) {
-    return z((p, q) => p)
+    // return z((p, q) => p)
+    return z[0]
 }
 
 function tail(z) {
-    return z((p, q) => q)
+    // return z((p, q) => q)
+    return z[1]
 }
 
 function is_null(list) {
@@ -66,19 +69,23 @@ function list(...elem) {
 function is_odd(x) {
     return x % 2 === 1
 }
+//
+// function display_list(items) {
+//     function iter(list) {
+//         if (is_null(list)) {
+//             return ")"
+//         } else if (is_pair(head(list))) {
+//             return "list(" + iter(head(list)) + iter(tail(list))
+//         } else {
+//             return head(list) + ", " + iter(tail(list))
+//         }
+//     }
+//     const result = iter(items)
+//     console.log(`list(${result})`)
+// }
 
-function display_list(items) {
-    function iter(list) {
-        if (is_null(list)) {
-            return ")"
-        } else if (is_pair(head(list))) {
-            return "list(" + iter(head(list)) + iter(tail(list))
-        } else {
-            return head(list) + ", " + iter(tail(list))
-        }
-    }
-    const result = iter(items)
-    console.log(`list(${result})`)
+function display_list(item) {
+    console.log(JSON.stringify(item))
 }
 
 function times(x, y) {
@@ -89,7 +96,15 @@ function divide(x, y) {
     return x / y
 }
 
+function is_number(x) {
+    return typeof x === 'number'
+}
+
+function is_string(x) {
+    return typeof x === 'string'
+}
+
 module.exports = {
     abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail,
-    list, display_list, is_null, is_pair, is_odd, plus, times, divide
+    list, display_list, is_null, is_pair, is_odd, plus, times, divide, is_number, is_string
 }
