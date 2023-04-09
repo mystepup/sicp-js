@@ -103,8 +103,11 @@ function is_number(x) {
 function is_string(x) {
     return typeof x === 'string'
 }
+function is_undefined(x) {
+    return x === undefined;
+}
 
 module.exports = {
     abs, square, is_even, double, halve, gcd, average, sum, cube, display, pair, head, tail,
-    list, display_list, is_null, is_pair, is_odd, plus, times, divide, is_number, is_string
+    list, display_list, is_null, is_pair, is_odd, plus, times, divide, is_number, is_string, is_undefined
 }
