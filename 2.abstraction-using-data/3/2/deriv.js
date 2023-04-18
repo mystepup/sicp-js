@@ -1,8 +1,6 @@
 const {is_number, is_string, list, is_pair, head, tail} = require("../../../common/utils");
 
-function is_variable(x) {
-    return is_string(x)
-}
+
 
 function is_same_variable(v1, v2) {
     return is_variable(v1) && is_variable(v2) && v1 === v2
