@@ -1,0 +1,3 @@
+function isCycle(lst) {
+
+}
