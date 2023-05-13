@@ -1,5 +1,4 @@
-const {head, tail, set_head, set_tail, pair} = require("../../pair");
-const {is_null} = require("../../../../common/utils");
+const {is_null, head, tail, set_head, set_tail, pair} = require("../../../../common/utils");
 
 function front_ptr(queue) {
     return head(queue)
