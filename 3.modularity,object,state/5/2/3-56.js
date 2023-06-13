@@ -26,5 +26,5 @@ function merge(s1, s2) {
     }
 }
 
-const S = pair(1, () => merge(merge(scale_stream(S, 2), scale_stream(S, 3)), scale_stream(S, 5)))
-display_stream_interval(S, 10)
+// const S = pair(1, () => merge(merge(scale_stream(S, 2), scale_stream(S, 3)), scale_stream(S, 5)))
+// display_stream_interval(S, 10)

@@ -21,4 +21,4 @@ const one = pair(1, () => one)
 const integers = pair(1, () => add_streams(one, integers))
 
 const integer_pairs = pairs(integers, integers)
-display_stream_interval(integer_pairs, 10)
+display_stream_interval(integer_pairs, 20)
